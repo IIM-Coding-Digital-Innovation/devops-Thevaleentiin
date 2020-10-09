@@ -5,7 +5,7 @@ function ApiMeteo () {
     const [data, setData] = useState([]);
     const [load, setLoad] = useState(false);
     const [error, setError] = useState(null);
-    const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather?q=Paris&lang=fr&units=metric'
+    const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?q=Paris&lang=fr&units=metric'
     const API_KEY  = '&appid=be724fe74c0763368fc2501fa7398520'
   
     useEffect(() => {
