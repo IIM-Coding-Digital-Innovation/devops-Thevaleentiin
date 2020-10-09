@@ -29,7 +29,6 @@ function ApiMeteo () {
                         ? <li>{error.message}</li>
                         : [data].map((GetData, index) =>
                             <div key={index}>
-                                <p>Ville : {Math.round(GetData.name) + " °c "}</p>
                                 <p>Température : {Math.round(GetData.main.temp) + " °c "}</p>
                                 <p>Humidité : {Math.round(GetData.main.humidity) + " % "}</p>
                             </div>)
