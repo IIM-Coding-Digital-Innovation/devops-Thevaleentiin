@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {getData} from './getData'
+import SearchBar from './SearchBar'
+import loader from '../img/loader.gif'
 
 function ApiMeteo () {
     const [data, setData] = useState([]);
     const [load, setLoad] = useState(false);
     const [error, setError] = useState(null);
+    const [valueInput, SetValue] = useState('');
     const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?q=Paris&lang=fr&units=metric'
     const API_KEY  = '&appid=be724fe74c0763368fc2501fa7398520'
   
@@ -21,9 +24,11 @@ function ApiMeteo () {
     }, []);
 
 
+
     if (load) {
         return (
                 <>
+                    <SearchBar value={valueInput} />
                     {
                         error 
                         ? <li>{error.message}</li>
@@ -41,7 +46,7 @@ function ApiMeteo () {
     else {
         return (
             <>
-                <p>Chargement...</p>
+                <img src={loader} alt="loader" className="loader-page" /> 
             </>
         );
     }
