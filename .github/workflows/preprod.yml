@@ -9,12 +9,10 @@ jobs:
         steps:
             - name: Init project
               uses: actions/checkout@v2
-            - name: CSS Minifier
-              uses: chand1012/action-css-minify@v1
             - name: Minify CSS
               uses: chand1012/action-css-minify@v1
               with:
-                folder: '../src'           
+                folder: 'src/css'           
             - name: JS Linter
               uses: actions/javascript-action@v1
               with:
