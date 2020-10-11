@@ -19,6 +19,7 @@ jobs:
                 milliseconds: 1000
             - name: Check package version
               uses: technote-space/package-version-check-action@v1
+            - name: Checking for broken link in preprod
               uses: ScholliYT/Broken-Links-Crawler-Action@v2.1.1
               with:
                 website_url: 'https://devops-weather-app-preprod.herokuapp.com/'
