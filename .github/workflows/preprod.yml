@@ -1,4 +1,4 @@
-name: Deploy weather App 
+name: Deployer l'application Weather 
 on:
     push:
         branches:
@@ -12,7 +12,7 @@ jobs:
             - name: JS Linter
                 uses: actions/javascript-action@v1
                 with:
-                milliseconds: 1000
+                  milliseconds: 1000
             - name: Check package version
                 uses: technote-space/package-version-check-action@v1
             - name: Deploy to Heroku
