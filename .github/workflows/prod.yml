@@ -22,7 +22,7 @@ jobs:
             - name: Checking for broken link in preprod
               uses: ScholliYT/Broken-Links-Crawler-Action@v2.1.1
               with:
-                website_url: 'https://devops-weather-app-prod.herokuapp.com/'
+                website_url: 'https://devops-weather-app-preprod.herokuapp.com/'
                 verbose: 'true'
                 max_retry_time: 30
                 max_retries: 5
