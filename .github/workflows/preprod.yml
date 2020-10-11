@@ -14,7 +14,7 @@ jobs:
             - name: Minify CSS
               uses: chand1012/action-css-minify@v1
               with:
-                folder: 'src'           
+                folder: '../src'           
             - name: JS Linter
               uses: actions/javascript-action@v1
               with:
